@@ -65,6 +65,7 @@ class ExpenditureResource extends Resource
                     ->searchable(),
                 Tables\Columns\SelectColumn::make('type')
                     ->options(ExpenditureType::class)
+                    ->rules(['required'])
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
                     ->limit(20)
