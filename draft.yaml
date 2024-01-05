@@ -1,0 +1,19 @@
+models:
+  Expenditure:
+    currency: enum:HUF,EUR
+    grossAmount: number
+    type: enum:infrastructure,personal,legal,overhead,other,tax,marketing
+    description: string
+    reference: string
+    merchant: string
+    paidAt: date
+
+  Income:
+    currency: enum:HUF,EUR
+    grossAmount: number
+    description: string
+    reference: string
+    payer: string
+    paidAt: date
+    invoiceId: string
+

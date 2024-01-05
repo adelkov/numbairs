@@ -1,0 +1,11 @@
+created:
+    - database/factories/ExpenditureFactory.php
+    - database/factories/IncomeFactory.php
+    - database/migrations/2024_01_05_160312_create_expenditures_table.php
+    - database/migrations/2024_01_05_160313_create_incomes_table.php
+    - app/Models/Expenditure.php
+    - app/Models/Income.php
+models:
+    User: {  }
+    Expenditure: { currency: 'enum:HUF,EUR', grossAmount: number, type: 'enum:infrastructure,personal,legal,overhead,other,tax,marketing', description: string, reference: string, merchant: string, paidAt: date }
+    Income: { currency: 'enum:HUF,EUR', grossAmount: number, description: string, reference: string, payer: string, paidAt: date, invoiceId: string }
